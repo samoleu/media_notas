@@ -11,6 +11,14 @@ public class Main {
         double nmax = scanner.nextDouble();
         System.out.print("O valor mínimo da prova: ");
         double nmin = scanner.nextDouble();
+
+        while(nmax<nmin){
+
+            System.out.println("Sua nota máxima é menor que sua nota mínima\nDigite uma nota mínima  válida: ");
+            nmin = scanner.nextDouble();
+
+        }
+
         System.out.print("valor médio da prova: ");
         double nmed = scanner.nextDouble();
         System.out.print("O valor para se estar de recuperação: ");
@@ -18,10 +26,25 @@ public class Main {
 
         System.out.println();
 
+        while(nmed<rec){
+
+            System.out.println("A nota de recuperação é maior que sua nota média\nEscreva uma nota de recuperação válida: ");
+            rec = scanner.nextDouble();
+
+        }
+
         System.out.print("Digite a primeira nota: ");
         double n1 = scanner.nextDouble();
         System.out.print("Digite a segunda nota: ");
         double n2 = scanner.nextDouble();
+
+        while(nmax<n1 || nmin>n1 && nmax<n2 || nmin>n2){
+
+            System.out.println("Nota inválida\nescreva uma nova nota válida (primeira): \nescreva uma nova nota válida (segunda): ");
+            n1 = scanner.nextDouble();
+            n2 = scanner.nextDouble();
+
+        }
 
         System.out.println();
 
